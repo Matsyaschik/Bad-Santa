@@ -1,0 +1,39 @@
+body {
+	/* height: 100vh; */
+	background: linear-gradient(180deg, #FFC785 0%, 
+	rgba(255, 255, 255, 0) 100%), 
+	linear-gradient(180deg, #FF070E 0%,
+	rgba(255, 255, 255, 0) 100%), #FF070E;
+
+}
+
+.сontainer {
+	width: 100%;
+	/* height: 100vh; */
+	background-image: url(../src/stars-bg.png);
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	flex-flow: row nowrap;
+	justify-content: center;
+	height: 120px;
+}
+
+h1 {
+	margin: 0 6px;
+	align-content: stretch;
+	font-family: 'Pacifico', cursive;
+	font-size: 74px;
+	text-align: center;
+	align-items: center;
+	color: #fffffF;
+	flex-grow: 1;
+}
+
+.icon {
+	height: 120px;
+	width: 120px;
+	transform: none;
+}

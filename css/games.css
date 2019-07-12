@@ -1,0 +1,70 @@
+.gameList {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+
+.game {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+	padding: 4px 200px;
+}
+
+h2 {
+	margin: 10px;
+	text-align: center;
+	font-family: 'Pacifico', cursive;
+	align-content: stretch;
+	font-size: 32px;
+	align-items: center;
+	color: #fffffF;
+	flex-basis: 30%;
+	font-weight: normal;
+
+	/* flex-grow: 1; */
+}
+
+
+
+h3 {
+	margin: 10px;
+	font-family: 'Pacifico', cursive;
+	align-content: stretch;
+	font-size: 32px;
+	align-items: center;
+	background-color: #E72D4F;
+	border-radius: 80px;
+	color: #fffffF;
+	flex-basis: 100%;
+	font-weight: normal;
+	padding-left: 30px;
+	border: none;
+
+	/* flex-grow: 1; */
+}
+
+.looker{
+	text-align: center;
+	flex-shrink: 3;
+	padding-left: 0px;
+	background-color: #3BAF1D;
+}
+
+.player{
+	
+	font-size: 26px;
+	margin: 2px 200px;
+}
+
+.start {
+	background-color: red;
+}
+
+.end {
+	background-color: gray;
+}
+
+
