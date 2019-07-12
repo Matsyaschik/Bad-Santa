@@ -1,49 +1,21 @@
 // var login;
 
-// function sendForm(e) {
-//     var nameBox = document.getElementById("nameBox");
-//     login = nameBox.value;
-//     if (isValid(login)) {
-//         alert("Вы ввели недопустимое или уже существующее имя пользователя");
-//         e.preventDefault();
-//     }
-//     else {
-//         console.log("Авторизация");
+function sendForm(e) {
+    fakeWork();
+};
 
-//         // Auth(login);
-
-
-//         document.location.href = "Games.html";
-//     }
-// }
-
-// function isValid(string) {
-//     if (!string | string.length < 2) {
-//         return true;
-//     }
-//     else {
-//         var re = new RegExp('^[а-яА-Яa-zA-Z_0-9ёЁ]*$');
-//         if (re.test(string)) {
-//             return false;
-//         }
-//         else {
-//             return true;
-//         }
-//     }
-// }
-
-// var sendButton = document.getElementById("click-button");
-// sendButton.addEventListener("click", sendForm);
+var sendButton = document.getElementById("join");
+sendButton.addEventListener("click", sendForm);
 
 var response = {
   "allParticipants": [
     {
       "id": "1",
-      "name": "Ваня"
+      "name": "Персифаль"
     },
     {
       "id": "2",
-      "name": "Катя"
+      "name": "Артемида"
     },
     {
       "id": "3",
@@ -93,3 +65,17 @@ function getAllPlayer() {
 };
 
 getAllPlayer();
+
+function startGame() {
+  document.getElementById("giftDescription").innerHTML = `${response.allParticipants[3].name} желает получить: Что-нибудь красивое, возможно розовенькое, а главное чтобы было новогоднее. Можно реальный кекс )))))`;
+};
+var fakePlayer = [{"name" : "Виталя"}]
+
+startGame();
+// fakeWork();
+
+function fakeWork() {
+  document.getElementById("join").hidden = true;
+  document.getElementById("gameList").innerHTML += (fakePlayer.map(renderPlayer).join(""));
+  document.getElementById("giftSpace").hidden = false;
+}

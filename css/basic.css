@@ -4,6 +4,9 @@ body {
 	rgba(255, 255, 255, 0) 100%), 
 	linear-gradient(180deg, #FF070E 0%,
 	rgba(255, 255, 255, 0) 100%), #FF070E;
+	font-family: 'Pacifico', cursive;
+	font-size: 34px;
+	color: #fffffF;
 
 }
 
@@ -36,4 +39,9 @@ h1 {
 	height: 120px;
 	width: 120px;
 	transform: none;
+}
+
+p {
+	position: absolute;
+	left: 130px;
 }

@@ -3,7 +3,6 @@
 
 <head>
 	<meta charset="utf-8">
-	<script src="main.js"></script>
 	<title> Secret santa </title>
 	<link rel="stylesheet" href="css/basic.css">
 	<link rel="stylesheet" href="css/games.css">
@@ -14,41 +13,22 @@
 	<div class="сontainer">
 		<header>
 			<img src="src/UserIcon.png" alt="User icon" class="icon">
-			<h1>Тайный санта</h1>
+			<h1 id="SecretSanta" >Тайный санта</h1>
 			<img src="src/SantaIcon.svg" alt="Santa icon" class="icon">
 		</header>
 		<h2>Все игры</h2>
 		<div class="gameList" id="gameList">
 			<div class="game">
 				<h3>Название игры</h3>
-				<h3 class="looker">глянуть</h3>
+				<h3 class="looker" id="showGame">глянуть</h3>
 			</div>
-			<div class="game">
-				<h3 class="start">В процессе игры</h3>
-				<h3 class="looker">глянуть</h3>
-			</div>
-			<div class="game">
-				<h3 class="end">Зевершённая игра</h3>
-				<h3 class="looker">глянуть</h3>
-			</div>
-			<div class="game">
-				<h3>Название игры</h3>
-				<h3 class="looker">глянуть</h3>
-			</div>
-			<div class="game">
-				<h3>Название игры</h3>
-				<h3 class="looker">глянуть</h3>
-			</div>
-			<div class="game">
-				<h3>Название игры</h3>
-				<h3 class="looker">глянуть</h3>
-			</div>
-			<div class="game">
-				<h3>Название игры</h3>
-				<h3 class="looker">глянуть</h3>
-			</div>
+			
 		</div>
 	</div>
+
+	<script src="js/basic.js"></script>
+	<script src="js/games.js"></script>
+
 </body>
 
 </html>

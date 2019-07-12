@@ -56,7 +56,7 @@ h3 {
 .player{
 	
 	font-size: 26px;
-	margin: 2px 200px;
+	margin: 4px 200px;
 }
 
 .start {
@@ -67,4 +67,76 @@ h3 {
 	background-color: gray;
 }
 
+.gift {
+	text-align: center;
+	flex-shrink: 3;
+	padding-left: 0px;
+	background-color: #3BAF1D;
+	border-radius: 2em;
+}
 
+.join {
+	background-color: #3BAF1D;
+	color: #fffffF;
+	font-family: 'Pacifico', cursive;
+	font-size: 40px;
+	border: 15px;
+	width: 600px;
+	border-radius: 80px;
+	margin: 40px;
+}
+
+
+
+
+
+
+.boxes {
+	margin: auto;
+	padding: 50px;
+	margin-left: 465px;
+  }
+  
+  /*Checkboxes styles*/
+  input[type="checkbox"] { display: none; }
+  
+  input[type="checkbox"] + label {
+	display: block;
+	position: relative;
+	padding-left: 70px;
+	margin-bottom: 20px;
+	font: 48px 'Pacifico', cursive;;
+	color: #3BAF1D;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+  }
+  
+  input[type="checkbox"] + label:last-child { margin-bottom: 0; }
+  
+  input[type="checkbox"] + label:before {
+	content: '';
+	display: block;
+	width: 50px;
+	height: 50px;
+	border: 5px solid #3BAF1D;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: .6;
+	-webkit-transition: all .12s, border-color .08s;
+	transition: all .12s, border-color .08s;
+  }
+  
+  input[type="checkbox"]:checked + label:before {
+	width: 10px;
+	top: -5px;
+	left: 5px;
+	border-radius: 0;
+	opacity: 1;
+	border-top-color: transparent;
+	border-left-color: transparent;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+  }
