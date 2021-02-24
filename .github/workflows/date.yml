@@ -8,5 +8,7 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
       - run: |
+          git config user.name matsyashchik
+          git config user.email m_vlad_f@hotmail.com
           git commit --allow-empty -m 'Monitoring $(date +'%d.%m.%Y - %H:%M')'
           git push
