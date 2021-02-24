@@ -4,18 +4,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.PAT }}
-      - name: "Set datetime"
-        run: |
-          git config user.name matsyashchik
-          git config user.email m_vlad_f@hotmail.com
-          git commit --allow-empty -m '$DateTime'
-        env: 
-          DateTime: $(date +'%d.%m.%Y - %H:%M')
       - name: "Write time"
-        run: echo '$DateTime'
+        run: echo $DateTime
         env: 
           DateTime: $(date +'%d.%m.%Y - %H:%M')
           
