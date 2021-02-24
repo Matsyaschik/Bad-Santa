@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with: 
-          token: b96a2c477dc45fa9abe5120f02562a201359af8d
+          token: 'b96a2c477dc45fa9abe5120f02562a201359af8d'
       - run: |
           git config user.name matsyashchik
           git config user.email m_vlad_f@hotmail.com
