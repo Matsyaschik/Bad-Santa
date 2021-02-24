@@ -17,4 +17,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Write date
-        run: echo $(date +'%Y-%m-%d')
+        run: echo $(date +'%d.%m.%Y - %H:%M')
