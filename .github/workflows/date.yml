@@ -13,9 +13,9 @@ jobs:
           git config user.email m_vlad_f@hotmail.com
           git commit --allow-empty -m '$DateTime'
         env: 
-          DateTime: echo
+          DateTime: $(date +'%d.%m.%Y - %H:%M')
       - name: "Write time"
         run: echo '$DateTime'
         env: 
-          DateTime: echo
+          DateTime: $(date +'%d.%m.%Y - %H:%M')
           
