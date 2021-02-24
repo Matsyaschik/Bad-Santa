@@ -18,7 +18,7 @@ jobs:
         run: |
           git config user.name matsyashchik
           git config user.email m_vlad_f@hotmail.com
-          git commit --allow-empty -m ${{ env.DATE }}
+          git commit --allow-empty -m "${{ env.DATE }}"
           git push
 #       - name: "Write time"
 #         run: echo "$DateTime"
