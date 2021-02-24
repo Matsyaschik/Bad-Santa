@@ -14,5 +14,5 @@ jobs:
           git commit --allow-empty -m "$DateTime"
           git push
         env: 
-          DateTime: $(date)
+          DateTime: (date +'%d.%m.%Y - %H:%M')
           
