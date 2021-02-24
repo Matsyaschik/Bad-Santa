@@ -4,8 +4,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: "Write time"
-        run: echo "$DateTime"
-        env: 
-          DateTime: ${{ date }}
+      - name: Dynamically set MY_DATE environment variable
+        run: echo "MY_DATE=$(date +'%d.%m.%Y - %H:%M')" >> $GITHUB_ENV
+      - name: Test MY_DATE variable
+        run: echo ${{ env.MY_DATE }}
+#       - name: "Write time"
+#         run: echo "$DateTime"
+#         env: 
+#           DateTime: ${{ date }}
           
