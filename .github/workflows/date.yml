@@ -4,10 +4,24 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Dynamically set MY_DATE environment variable
-        run: echo "MY_DATE=$(date +'%d.%m.%Y - %H:%M')" >> $GITHUB_ENV
-      - name: Test MY_DATE variable
-        run: echo ${{ env.MY_DATE }}
+    
+#       - name: Dynamically set MY_DATE environment variable
+#         run: echo "MY_DATE=$(date +'%d.%m.%Y - %H:%M')" >> $GITHUB_ENV
+#       - name: Test MY_DATE variable
+#         run: echo ${{ env.MY_DATE }}
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.PAT }}
+      - name: Dynamically set DATE environment variable
+        run: echo "DATE=$(date +'%d.%m.%Y - %H:%M')" >> $GITHUB_ENV
+      - name: "Set datetime"
+        run: |
+          git config user.name matsyashchik
+          git config user.email m_vlad_f@hotmail.com
+          git commit --allow-empty -m "${{ env.MY_DATE }}
+          git push
+        env: 
+          DateTime: (date +'%d.%m.%Y - %H:%M')
 #       - name: "Write time"
 #         run: echo "$DateTime"
 #         env: 
