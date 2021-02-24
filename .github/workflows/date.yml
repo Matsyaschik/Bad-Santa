@@ -5,8 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with: 
-          token: 'b96a2c477dc45fa9abe5120f02562a201359af8d'
+        with:
+          token: ${{ secrets.PAT }}
       - run: |
           git commit --allow-empty -m 'Monitoring $(date +'%d.%m.%Y - %H:%M')'
           git push
