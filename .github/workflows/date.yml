@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Write time"
-        run: echo $DateTime
+        run: echo "$DateTime"
         env: 
-          DateTime: $(date +'%d.%m.%Y - %H:%M')
+          DateTime: ${{ date }}
           
