@@ -10,7 +10,5 @@ jobs:
         with: 
           token: 'b96a2c477dc45fa9abe5120f02562a201359af8d'
       - run: |
-          git config user.name matsyashchik
-          git config user.email m_vlad_f@hotmail.com
           git commit --allow-empty -m 'Monitoring $(date +'%d.%m.%Y - %H:%M')'
           git push
