@@ -20,7 +20,7 @@ jobs:
           git config user.email m_vlad_f@hotmail.com
           git commit --allow-empty -m "${{ env.DATEE }}"
           git push
-          var:
+          env:
             DATEE: $(date +'%d.%m.%Y - %H:%M')
 #       - name: "Write time"
 #         run: echo "$DateTime"
