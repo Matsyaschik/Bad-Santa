@@ -1,5 +1,7 @@
-name: CI
-on: push
+name: Date Cron
+on: 
+  schedule: 
+    - cron:  '*/15 * * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
