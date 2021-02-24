@@ -1,7 +1,5 @@
 name: Date Cron
-on: 
-  schedule: 
-    - cron:  '*/5 * * * *'
+on: push
 jobs:
   build:
     runs-on: ubuntu-latest
