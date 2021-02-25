@@ -32,8 +32,8 @@ jobs:
         env:
           commitName: ${{ github.event.inputs.logLevel }} || ${{ env.DATE }}
       - name: Test write 3
-        
-        run: echo ${{ commit }}
         env:
           commit: ${{ github.event.inputs.logLevel }} || ${{ env.DATE }}
+        run: echo ${{ env.commit }}
+        
         
