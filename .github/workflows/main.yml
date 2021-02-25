@@ -3,7 +3,15 @@
 name: CI
 
 # Controls when the action will run. 
-on: [push]
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Commit name'     
+        required: true
+        default: 'test commit'
+        
 jobs:
   # This workflow contains a single job called "build"
   build:
@@ -14,7 +22,17 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
+      - name: Dynamically set DATE environment variable
+        run: echo "DATE=$(date +'%d.%m.%Y - %H:%M')" >> $GITHUB_ENV
       # Runs a single command using the runners shell
-      - name: Write date
-        run: echo $(date +'%d.%m.%Y - %H:%M')
+      - name: Test write 1
+        run: echo ${{ github.event.inputs.logLevel }} || ${{ env.DATE }}
+      - name: Test write 2
+        run: echo ${{ env.commitName }}
+        env:
+          commitName: ${{ github.event.inputs.logLevel }} || ${{ env.DATE }}
+      - name: Test write 3
+        env:
+          commit: ${{ github.event.inputs.logLevel }} || ${{ env.DATE }}
+        run: echo ${{ commit }}
+        
